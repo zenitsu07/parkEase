@@ -106,6 +106,7 @@ const  Nav= ({history}) => {
         })}
       >
         <Toolbar style={{backgroundColor: "#EFF1F3"}}>
+
           <IconButton
             color="#1f2937"
             aria-label="open drawer"
@@ -114,11 +115,15 @@ const  Nav= ({history}) => {
             className={clsx(classes.menuButton, open && classes.hide)}
           >
             <MenuIcon />
+
           </IconButton>
+
           <Typography variant="h6" noWrap style={{color:"#1f2937"}}>
             ParkSense
           </Typography>
+
           <Typography>
+            
           {!getUser() && (
               
                 <li className="nav-item"  style={{ marginLeft: 850, listStyleType: null}}>

@@ -6,6 +6,7 @@ import {authenticate, getUser} from './helpers'
 
 
 const Login =(props) =>{
+    
     const [state, setState] = useState({
         name:'',
         password:''
@@ -16,12 +17,13 @@ const Login =(props) =>{
         getUser() && props.history.push('/');
     }, [])
 
-    const handleChange =(name) => (event) =>{
+    const handleChange = (name) => (event) =>{
         //console.log('name', name, 'event', event.target.value)
         setState({...state, [name]: event.target.value})
     };
 
      const handleSubmit= event =>{
+        
             event.preventDefault();
             console.table({name, password});
             axios.post(`${process.env.REACT_APP_API}/login`, {name, password})
@@ -38,6 +40,7 @@ const Login =(props) =>{
      };
 
     return(
+
         <div>
             <div class="header">
                 <div class="container">   
@@ -53,7 +56,9 @@ const Login =(props) =>{
 
             
             <div className="container">
+
                 <div className="row">
+                    
                     <div className="col-md-6 mt-5 mx-auto">
                         <div className="container pb-5">
                             <h3>ADMINISTRATIVE LOGIN</h3>
@@ -77,6 +82,7 @@ const Login =(props) =>{
                 </div>
             </div>
         </div>
+
     )
 }
 

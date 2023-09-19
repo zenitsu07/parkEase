@@ -95,10 +95,6 @@ const Create= () => {
           
         </div>
         <br />
-        <div class="footer">
-            <p>© Copyright 2020-21</p>
-        </div>
-
         </div>
         );
 };
