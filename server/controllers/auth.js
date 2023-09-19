@@ -1,8 +1,11 @@
 const jwt = require('jsonwebtoken');
 const expressJwt= require('express-jwt')
+const dotenv = require('dotenv')
+
+    dotenv.config();
 
 exports.login = (req, res) =>{  
-
+ 
     const {name, password} =req.body;
 
     if(password === process.env.PASSWORD){
